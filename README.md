@@ -68,10 +68,11 @@ For a detailed explanation of the feature flags, segments, metrics, experimentat
    npm install
    ```
 
-3. **Configure LaunchDarkly:**
-   - Create a `.env` file in the project root with your LaunchDarkly client-side ID:
+3. **Configure environment variables:**
+   - Create a `.env` file in the project root with your LaunchDarkly client-side ID and API URL:
      ```
      VITE_LD_CLIENT_ID=your-client-side-id-here
+     VITE_API_URL=http://127.0.0.1:5000/context
      ```
    - (Optional) Adjust feature flag keys in the code to match your LaunchDarkly project.
 
@@ -124,7 +125,7 @@ For a detailed explanation of the feature flags, segments, metrics, experimentat
 
 ## Environment Variables
 
-- **Frontend:** `.env` with `VITE_LD_CLIENT_ID`
+- **Frontend:** `.env` with `VITE_LD_CLIENT_ID` and `VITE_API_URL`
 - **Backend:** `.env` with `LD_SDK_KEY` (LaunchDarkly SDK key), `OPENAI_API_KEY` (OpenAI API key)
 - See `.env.example` in the backend for required keys.
 
